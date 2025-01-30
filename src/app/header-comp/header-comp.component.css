@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(204, 56, 113);
+    color: white;
+    padding: 0px 15px;
+    border-radius: 15px;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+a {
+    padding: 0px 15px;
+}
