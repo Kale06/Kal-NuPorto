@@ -2,16 +2,65 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(204, 56, 113);
+    background-color: rgb(204, 56, 68);
     color: white;
     padding: 0px 15px;
     border-radius: 15px;
+    animation: fadeFromTop 650ms ease-in-out;
 }
 
 h4 {
+    padding-left: 0.7rem;
     font-weight: 300;
+    cursor: pointer;
+    font-style: italic;
 }
 
 a {
-    padding: 0px 15px;
+    padding: 0px 1rem;
+    text-decoration: none;
+    transition: 150ms ease-out;
+    font-size: 18pt;
+}
+
+@media screen and (min-width: 600px) {
+    a {
+        color: rgb(255, 142, 180);
+    }
+
+    a:hover{
+        scale:1.2;
+        color: rgb(255, 253, 253);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        color: rgb(255, 255, 255);
+    }
+}
+
+a:active {
+    color: rgb(168, 10, 71);
+    scale:1.1;
+}
+
+@keyframes fadeFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-25%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(3px);
+    }
+    75% {
+        transform: translateY(-1px);
+    }
+    90% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
