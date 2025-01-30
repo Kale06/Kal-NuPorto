@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-header-comp',
-  imports: [],
+  imports: [MatTooltipModule],
   templateUrl: './header-comp.component.html',
-  styleUrl: './header-comp.component.css'
+  styleUrls: ['./header-comp.component.css']
 })
-export class HeaderCompComponent {
+export class HeaderCompComponent implements OnInit {
+  kalTime: string | any;
 
+  ngOnInit() {
+  }
+  
+  refreshSite() {
+    window.location.reload();
+  }
 }
