@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 h1,
 h2,
@@ -8,17 +8,34 @@ h4,
 h5,
 h6,
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter Tight', sans-serif;
 }
 
 p {
-    font-weight: 200;
+    font-weight: 300;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.discrete{
+b {
+    font-weight: 600;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+.discrete {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: white;
+}
+
+:root {
+    background-color: rgb(238, 234, 243);
+
 }

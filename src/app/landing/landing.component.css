@@ -1,0 +1,19 @@
+.kal-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.kal-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .kal-container {
+        flex-direction: column;
+    }
+}
