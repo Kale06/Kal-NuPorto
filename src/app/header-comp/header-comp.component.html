@@ -2,9 +2,29 @@
     <button (click)="refreshSite()" class="discrete">
         <h3>haikaaal.vercel.app</h3>
     </button>
-        <button class="discrete burger">
+        <button class="discrete burger" mat-button [matMenuTriggerFor]="menu">
             <i class="material-icons">arrow_drop_down</i>
         </button>
+        <mat-menu #menu="matMenu">
+            <button (click)="navigateTo('https://github.com/Kale06')" mat-menu-item>
+                <div class="burg-item">
+                    <p class="fa fa-github"></p>
+                    <p>Github</p>
+                </div>
+            </button>
+            <button (click)="navigateTo('https://linkedin.com/in/kaaal')" mat-menu-item>
+                <div class="burg-item">
+                    <p class="fa fa-linkedin"></p>
+                    <p>LinkedIn</p>
+                </div>
+            </button>
+            <button (click)="navigateTo('mailto:muhammad.haikal100602@gmail.com')" mat-menu-item>
+                <div class="burg-item">
+                    <p class="fa fa-envelope"></p>
+                    <p>Email</p>
+                </div>
+            </button>
+        </mat-menu>
     <div class="social">
         <p>
             <!-- Make service here -->

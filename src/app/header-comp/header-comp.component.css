@@ -7,7 +7,7 @@
     margin: 10px 12px;
     padding: 0px 15px;
     border-radius: 15px;
-    animation: fadeFromTop 650ms ease-in-out;
+    animation: fadeFromTop 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 h3 {
@@ -44,8 +44,8 @@ a {
         color: rgb(255, 142, 180);
     }
 
-    a:hover{
-        scale:1.2;
+    a:hover {
+        scale: 1.2;
         color: rgb(255, 253, 253);
     }
 
@@ -55,33 +55,42 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-    .social{
+    .social {
         display: none;
     }
-    
+
 }
 
 a:active {
     color: rgb(168, 10, 71);
-    scale:1.1;
+    scale: 1.1;
 }
 
 @keyframes fadeFromTop {
-    0% {
+    from {
+        transform: translateY(-100%);
         opacity: 0;
-        transform: translateY(-25%);
     }
-    60% {
-        opacity: 1;
-        transform: translateY(3px);
-    }
-    75% {
-        transform: translateY(-1px);
-    }
-    90% {
-        transform: translateY(2px);
-    }
-    100% {
+
+    to {
         transform: translateY(0);
+        opacity: 1;
     }
+}
+
+.burg-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burg-item * {
+    padding: 3px;
+    font-weight: 300;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
