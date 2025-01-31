@@ -2,16 +2,95 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(204, 56, 113);
+    background-color: rgb(204, 56, 68);
     color: white;
+    margin: 10px 12px;
     padding: 0px 15px;
     border-radius: 15px;
+    animation: fadeFromTop 650ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-h4 {
+h3 {
+    padding-left: 0.7rem;
     font-weight: 300;
+    cursor: pointer;
+    font-style: italic;
+    transition: 150ms ease-out;
+}
+
+h3:hover {
+    font-weight: 800;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-betwee1n;
+}
+
+h3:active {
+    color: rgb(168, 10, 71);
 }
 
 a {
-    padding: 0px 15px;
+    text-decoration: none;
+    transition: 150ms ease-out;
+    font-size: 18pt;
+}
+
+@media screen and (min-width: 600px) {
+    a {
+        padding: 0px 1rem;
+        color: rgb(255, 142, 180);
+    }
+
+    a:hover {
+        scale: 1.2;
+        color: rgb(255, 253, 253);
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .social {
+        display: none;
+    }
+
+}
+
+a:active {
+    color: rgb(168, 10, 71);
+    scale: 1.1;
+}
+
+@keyframes fadeFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.burg-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burg-item * {
+    padding: 3px;
+    font-weight: 300;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
