@@ -17,3 +17,9 @@
         flex-direction: column;
     }
 }
+
+@media screen and (min-width: 1500px) {
+    .kal-container {
+        padding: 0px 15%;
+    }
+}

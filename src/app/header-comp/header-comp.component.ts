@@ -15,6 +15,23 @@ export class HeaderCompComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  onScroll = () => {
+    const header = document.getElementsByClassName('header')[0];
+    if (window.scrollY > 0) {
+      header.classList.add('post-scroll');
+    } else {
+      header.classList.remove('post-scroll');
+    }
+  }
+
   openBurgerBar() {
     this.burger = !this.burger;
   }
